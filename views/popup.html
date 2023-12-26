@@ -1,17 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Code Snippet Extractor</title>
-  <style>
-    body {
-      width: 200px;
-      padding: 10px;
-    }
-  </style>
+  <link rel="stylesheet" href="../vendors/prism/prism.css">
+  <link rel="stylesheet" href="../vendors/prism/plugins/line-numbers/prism-line-numbers.css">
+  <link rel="stylesheet" href="../styles/popup.css">
 </head>
+
 <body>
+  <div id="loading" class="hidden">Extracting...</div>
+  <pre id="codeSnippet" class="line-numbers" data-line="1" data-start="1" readonly></pre>
   <button id="extractButton">Extract Code</button>
-  <div id="output"></div>
-  <script src="popup.js"></script>
+
+  <script src="../vendors/prism/prism.js"></script>
+  <script src="../vendors/prism/plugins/line-numbers/prism-line-numbers.js"></script>
+  <script src="../scripts/popup.js"></script>
 </body>
+
 </html>
