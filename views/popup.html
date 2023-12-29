@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Code Snippet Extractor</title>
   <link rel="stylesheet" href="../vendors/prism/prism.css">
-  <link rel="stylesheet" href="../vendors/prism/plugins/line-numbers/prism-line-numbers.css">
   <link rel="stylesheet" href="../styles/popup.css">
 </head>
 
@@ -14,6 +13,13 @@
   <div id="loading" class="hidden">Extracting...</div>
   <pre id="codeSnippet" class="line-numbers" data-line="1" data-start="1" readonly></pre>
   <button id="extractButton">Extract Code</button>
+  <button id="saveButton">Save</button>
+  <!-- Added the select element below -->
+  <select id="language">
+    <!-- Add options based on your preferences -->
+    <option value="javascript">JavaScript</option>
+    <!-- Add more options as needed -->
+  </select>
 
   <script src="../vendors/prism/prism.js"></script>
   <script src="../vendors/prism/plugins/line-numbers/prism-line-numbers.js"></script>

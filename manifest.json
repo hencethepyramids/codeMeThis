@@ -1,25 +1,30 @@
 {
-    "manifest_version": 2,
-    "name": "Code Snippet Extractor",
-    "version": "1.0",
-    "description": "Extracts code snippets from the current webpage.",
-    "permissions": ["activeTab", "storage"],
-    "browser_action": {
-      "default_icon": "images/codeGrabber.png",
-      "default_popup": "views/popup.html"
+  "manifest_version": 3,
+  "name": "Code Snippet Extractor",
+  "version": "1.0",
+  "description": "Extracts code snippets from the current webpage.",
+  "permissions": ["activeTab", "storage"],
+  "action": {
+    "default_icon": {
+      "16": "images/codeGrabber.png",
+      "48": "images/codeGrabber.png",
+      "128": "images/codeGrabber.png"
     },
-    "content_scripts": [
-      {
-        "matches": ["<all_urls>"],
-        "js": ["scripts/content.js"]
-      }
-    ],
-    "options_ui": {
-        "page": "views/options.html"
-    },
-    "icons": {
-        "48": "images/codeGrabber.png",
-        "128": "images/codeGrabber.png"
+    "default_popup": "views/popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["scripts/content.js"],
+      "run_at": "document_end"
     }
+  ],
+  "options_ui": {
+    "page": "views/options.html"
+  },
+  "icons": {
+    "16": "images/codeGrabber.png",
+    "48": "images/codeGrabber.png",
+    "128": "images/codeGrabber.png"
+  }
 }
-  
